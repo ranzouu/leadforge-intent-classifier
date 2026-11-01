@@ -1,0 +1,16 @@
+id,text,expected,predicted,correct
+1,Quero contratar um plano de musculação para minha academia,hot,hot,True
+2,Preciso de um site para meu petshop,hot,hot,True
+3,Quero automatizar o cardápio do meu restaurante,hot,hot,True
+4,Estou procurando um sistema para minha loja,warm,warm,True
+5,Quero melhorar a organização da minha academia,warm,warm,True
+6,Meu petshop precisa de um sistema de agenda,warm,warm,True
+7,Quero entender mais sobre automação,cold,cold,True
+8,Estou apenas pesquisando opções,cold,cold,True
+9,Quero um aplicativo para meu negócio,hot,hot,True
+10,Preciso de ajuda com marketing digital,warm,warm,True
+11,Só queria ver como funciona,cold,cold,True
+12,Quero contratar um personal para minha academia,hot,hot,True
+13,Estou começando um petshop e preciso de ajuda,warm,warm,True
+14,Quero criar um site institucional,hot,hot,True
+15,Ainda não sei se preciso de um sistema,cold,cold,True

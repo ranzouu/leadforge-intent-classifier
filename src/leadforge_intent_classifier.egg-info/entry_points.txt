@@ -1,0 +1,2 @@
+[console_scripts]
+leadforge-intent = leadforge_intent_classifier.cli:main

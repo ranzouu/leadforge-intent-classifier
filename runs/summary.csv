@@ -1,0 +1,2 @@
+accuracy,precision,recall,f1,samples,mode
+1.0,1.0,1.0,1.0,15,trained

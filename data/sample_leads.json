@@ -1,0 +1,17 @@
+[
+  {"id": 1, "text": "Quero contratar um plano de musculação para minha academia", "label": "hot"},
+  {"id": 2, "text": "Preciso de um site para meu petshop", "label": "hot"},
+  {"id": 3, "text": "Quero automatizar o cardápio do meu restaurante", "label": "hot"},
+  {"id": 4, "text": "Estou procurando um sistema para minha loja", "label": "warm"},
+  {"id": 5, "text": "Quero melhorar a organização da minha academia", "label": "warm"},
+  {"id": 6, "text": "Meu petshop precisa de um sistema de agenda", "label": "warm"},
+  {"id": 7, "text": "Quero entender mais sobre automação", "label": "cold"},
+  {"id": 8, "text": "Estou apenas pesquisando opções", "label": "cold"},
+  {"id": 9, "text": "Quero um aplicativo para meu negócio", "label": "hot"},
+  {"id": 10, "text": "Preciso de ajuda com marketing digital", "label": "warm"},
+  {"id": 11, "text": "Só queria ver como funciona", "label": "cold"},
+  {"id": 12, "text": "Quero contratar um personal para minha academia", "label": "hot"},
+  {"id": 13, "text": "Estou começando um petshop e preciso de ajuda", "label": "warm"},
+  {"id": 14, "text": "Quero criar um site institucional", "label": "hot"},
+  {"id": 15, "text": "Ainda não sei se preciso de um sistema", "label": "cold"}
+]

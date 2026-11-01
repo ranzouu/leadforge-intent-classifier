@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leadforge-intent-classifier"
+version = "0.1.0"
+description = "Classificador de intenção de prospecção (hot/warm/cold)"
+authors = [{name = "Rayson", email = "seu-email@exemplo.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+  "scikit-learn>=1.0",
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "rich>=13.0"
+]
+
+[project.scripts]
+leadforge-intent = "leadforge_intent_classifier.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
