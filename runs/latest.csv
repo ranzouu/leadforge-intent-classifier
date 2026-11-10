@@ -1,16 +1,61 @@
 id,text,expected,predicted,correct
-1,Quero contratar um plano de musculação para minha academia,hot,hot,True
-2,Preciso de um site para meu petshop,hot,hot,True
-3,Quero automatizar o cardápio do meu restaurante,hot,hot,True
-4,Estou procurando um sistema para minha loja,warm,warm,True
-5,Quero melhorar a organização da minha academia,warm,warm,True
-6,Meu petshop precisa de um sistema de agenda,warm,warm,True
-7,Quero entender mais sobre automação,cold,cold,True
-8,Estou apenas pesquisando opções,cold,cold,True
-9,Quero um aplicativo para meu negócio,hot,hot,True
-10,Preciso de ajuda com marketing digital,warm,warm,True
-11,Só queria ver como funciona,cold,cold,True
-12,Quero contratar um personal para minha academia,hot,hot,True
-13,Estou começando um petshop e preciso de ajuda,warm,warm,True
-14,Quero criar um site institucional,hot,hot,True
-15,Ainda não sei se preciso de um sistema,cold,cold,True
+1,Quero contratar um plano de musculação para minha academia,hot,hot,False
+9,Quero um aplicativo para meu negócio,hot,hot,False
+11,Só queria ver como funciona,cold,cold,False
+15,Ainda não sei se preciso de um sistema,cold,warm,False
+17,Preciso contratar um sistema pro meu salão essa semana,hot,warm,False
+21,"Quero começar esse mês, como faço pra assinar?",hot,hot,False
+33,Estou pensando em modernizar minha loja no próximo ano,warm,hot,False
+35,Queria saber os valores antes de decidir,warm,cold,False
+43,Tenho uma papelaria e queria saber mais,warm,cold,False
+44,Dá pra integrar com o sistema que já uso?,warm,warm,False
+53,Meu negócio é pequeno demais pra isso agora,cold,warm,False
+57,"Vi o anúncio, mas não tenho interesse agora",cold,cold,False
+8,Estou apenas pesquisando opções,cold,warm,False
+10,Preciso de ajuda com marketing digital,warm,hot,False
+13,Estou começando um petshop e preciso de ajuda,warm,warm,False
+14,Quero criar um site institucional,hot,hot,False
+24,Quero um e-commerce pra minha loja de calçados,hot,hot,False
+26,Quero modernizar minha loja e fechar com vocês,hot,warm,False
+29,"Quero ter presença digital, quero contratar agora",hot,hot,False
+32,Pode me explicar melhor como funciona a automação?,warm,cold,False
+34,Quanto tempo leva pra implementar no meu negócio?,warm,cold,False
+45,"Só estou olhando por curiosidade, sem compromisso",cold,cold,False
+49,"Estou vendo preços no mercado, sem pressa",cold,warm,False
+59,Vim só dar uma olhada,cold,cold,False
+7,Quero entender mais sobre automação,cold,warm,False
+12,Quero contratar um personal para minha academia,hot,hot,False
+16,Quero fechar um plano hoje para minha barbearia,hot,hot,False
+22,Quero contratar o serviço de marketing pra minha padaria,hot,hot,False
+27,Me manda o contrato que eu quero assinar essa semana,hot,hot,False
+36,Meu restaurante tá crescendo e preciso me organizar melhor,warm,warm,False
+38,Estou juntando propostas pra minha clínica,warm,warm,False
+40,Meu sócio falou pra eu procurar vocês,warm,hot,False
+42,Como funciona pra quem tem duas lojas?,warm,cold,False
+52,Queria só saber o que o app faz,cold,cold,False
+55,"Tô explorando, não sei nem se preciso",cold,cold,False
+60,"Sem interesse por enquanto, valeu",cold,cold,False
+3,Quero automatizar o cardápio do meu restaurante,hot,warm,False
+6,Meu petshop precisa de um sistema de agenda,warm,warm,False
+20,"Meu delivery precisa de cardápio digital, quero contratar",hot,hot,False
+25,"Preciso de um app pra minha academia, quero fechar",hot,hot,False
+28,Quero colocar meu restaurante no aplicativo de entregas,hot,hot,False
+30,Estou pesquisando sistemas pra minha oficina mecânica,warm,warm,False
+31,"Meu salão precisa de agenda, estou comparando opções",warm,warm,False
+37,"Ouvi falar do serviço, quero conhecer melhor",warm,warm,False
+48,Quero só entender a plataforma por enquanto,cold,cold,False
+50,"Recebi a mensagem no grupo, só vim ver",cold,cold,False
+51,Não estou precisando no momento,cold,cold,False
+54,Só queria guardar o contato pra depois,cold,cold,False
+2,Preciso de um site para meu petshop,hot,warm,False
+4,Estou procurando um sistema para minha loja,warm,hot,False
+5,Quero melhorar a organização da minha academia,warm,hot,False
+18,"Quero um site pra minha loja de roupas, pode mandar proposta",hot,hot,False
+19,Quero automatizar os agendamentos da minha clínica veterinária,hot,hot,False
+23,"Tenho interesse em contratar, me manda os valores dos planos",hot,warm,False
+39,Ainda estou vendo se vale a pena investir,warm,cold,False
+41,Quero melhorar o atendimento do meu petshop,warm,warm,False
+46,Achei interessante mas é só curiosidade,cold,cold,False
+47,"Talvez no futuro, obrigado",cold,cold,False
+56,"Curiosidade mesmo, pode me mandar o material",cold,warm,False
+58,"Só queria saber o preço, mas não pretendo contratar",cold,cold,False

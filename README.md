@@ -38,27 +38,41 @@ Transforma frases de leads em classificação de intenção de compra:
 | Camada | Tecnologia |
 |---|---|
 | Linguagem | Python ≥ 3.10 |
-| Vetorização | TF-IDF + n-grams (1,2) |
-| Modelo | Logistic Regression (balanced) |
-| Métricas | accuracy, precision, recall, F1 |
-| CLI | Rich |
-| Testes | pytest |
+| Vetorização | TF-IDF: word n-grams (1,2) + char_wb n-grams (2,4) em `FeatureUnion` |
+| Modelo | Logistic Regression (balanced, C tunado por nested CV) |
+| Métricas | accuracy, precision, recall, F1 por classe e geral (weighted/macro) |
+| Avaliação | StratifiedKFold out-of-fold, seed=42 |
 | Serialização | joblib |
+| Testes | pytest |
 
 ---
 
 ## 📈 Métricas
 
-**Dataset de exemplo (15 amostras, treino + avaliação no mesmo conjunto):**
+**Avaliação honesta — StratifiedKFold (5 folds, seed=42) com tuning de `C` aninhado dentro de cada fold. Os números são out-of-fold: toda amostra é classificada por um modelo que nunca a viu no treino.**
 
-| Métrica | Valor |
+| Métrica (média ± desvio entre folds) | Valor |
 |---|---|
-| Accuracy | **100.0%** |
-| Precision | **100.0%** |
-| Recall | **100.0%** |
-| F1 | **100.0%** |
+| Accuracy | **0.633 ± 0.192** |
+| Precision (weighted) | **0.634 ± 0.197** |
+| Recall (weighted) | **0.633 ± 0.192** |
+| F1 (weighted) | **0.630 ± 0.189** |
+| F1 (macro) | **0.633** |
 
-> Resultados no dataset sintético pequeno. Em produção com dados reais, considere validação cruzada e aumento do dataset.
+**Por classe (predições pooled out-of-fold):**
+
+| Classe | Precision | Recall | F1 | Suporte |
+|---|---|---|---|---|
+| cold | 0.700 | 0.700 | 0.700 | 20 |
+| hot | 0.750 | 0.750 | 0.750 | 20 |
+| warm | 0.450 | 0.450 | 0.450 | 20 |
+
+- Features: união de word n-grams (1,2) + char_wb n-grams (2,4), ambos `sublinear_tf`
+- `C` tunado por fold: `2.0, 0.5, 0.5, 2.0, 0.5` (grid 0.5–4.0, CV interno 3-fold); artefato final treinado em todos os dados com `C=4.0`
+- `warm` é a fronteira difícil do problema — separar "interesse" de "só curiosidade" é tênue até em leitura humana; é onde o ganho está
+- Dataset: 60 amostras (20/classe) de prospecção PT-BR escritas para exercitar o pipeline. Em produção, o mesmo código roda com dados reais de leads
+
+> Antes desta correção o projeto publicava "accuracy 1.0" medida no mesmo conjunto de treino — inflação por avaliação in-sample. Os valores acima são a métrica real, com o procedimento completo em `runs/` (`cv_folds.csv`, `class_report.csv`, `latest.csv` com as predições out-of-fold).
 
 ---
 
@@ -120,8 +134,10 @@ leadforge-intent-classifier/
 │   ├── model.pkl
 │   └── vectorizer.pkl
 ├── runs/
-│   ├── latest.csv
-│   └── summary.csv
+│   ├── latest.csv          # predições pooled out-of-fold
+│   ├── summary.csv         # métricas CV (média ± desvio)
+│   ├── cv_folds.csv        # métricas por fold
+│   └── class_report.csv    # precision/recall/F1 por classe
 ├── scripts/
 ├── pyproject.toml
 └── README.md

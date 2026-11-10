@@ -1,0 +1,4 @@
+class,precision,recall,f1,support
+cold,0.7,0.7,0.7,20
+hot,0.75,0.75,0.75,20
+warm,0.45,0.45,0.45,20

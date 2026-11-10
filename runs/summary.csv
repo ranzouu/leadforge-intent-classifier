@@ -1,2 +1,2 @@
-accuracy,precision,recall,f1,samples,mode
-1.0,1.0,1.0,1.0,15,trained
+mode,accuracy,accuracy_std,precision,precision_std,recall,recall_std,f1,f1_std,macro_f1,folds,samples,c_per_fold,final_C
+cv5,0.6333,0.1918,0.6344,0.1965,0.6333,0.1918,0.6304,0.1894,0.6333,5,60,2.0;0.5;0.5;2.0;0.5,4.0
